@@ -1,0 +1,30 @@
+:root {
+  --background: #f0f8ff; /* Soft blue */
+  --text: #333; /* Dark gray */
+  --heading: #000080; /* Navy blue */
+  --primary: #000080; /* Navy blue for buttons */
+  --primary-hover: #0000b3; /* Lighter navy for hover */
+  --white: #fff; /* White for cards/sections */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--heading);
+  font-weight: bold;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

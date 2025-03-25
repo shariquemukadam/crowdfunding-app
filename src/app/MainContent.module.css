@@ -1,0 +1,86 @@
+.mainContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: var(--background); /* Soft blue */
+    min-height: calc(100vh - 80px); /* Adjust based on header height */
+  }
+  
+  .textSection {
+    width: 50%;
+  }
+  
+  .textSection h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--heading);
+    font-family: sans-serif;
+    line-height: 1.2;
+  }
+  
+  .textSection p {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-top: 1rem;
+    font-family: sans-serif;
+  }
+  
+  .buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .donateButton {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+  
+  .donateButton:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+  }
+  
+  .lendButton {
+    background-color: transparent;
+    color: var(--primary);
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+  }
+  
+  .lendButton:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: scale(1.05);
+  }
+  
+  .imageSection {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imageSection img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }

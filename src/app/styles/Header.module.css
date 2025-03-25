@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0070f3;
+    text-decoration: none;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .nav a:hover {
+    color: #0070f3;
+  }
+  
+  .authButtons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .userSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .userEmail {
+    font-weight: 500;
+    color: #333;
+  }
