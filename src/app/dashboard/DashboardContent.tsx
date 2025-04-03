@@ -7,10 +7,11 @@ import styles from '../styles/Page.module.css';
 import OverviewTab from './OverviewTab.tsx';
 import SettingsTab from './SettingsTab.tsx';
 import InvestorTab from './InvestorTab.tsx';
+import { User } from "@supabase/supabase-js"; // Add this import
 
 export default function DashboardContent() {
   const [activeTab, setActiveTab] = useState<'overview' | 'settings' | 'investor'>('overview');
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null); // Fix "any" type here
   const router = useRouter();
 
   // Check if user is authenticated
@@ -19,14 +20,14 @@ export default function DashboardContent() {
       const { data: { user } } = await supabase.auth.getUser();
       setUser(user);
       if (!user) {
-        router.push('/auth'); // Redirect to auth page if not logged in
+        router.push('/auth');
       }
     };
     fetchUser();
   }, [router]);
 
   if (!user) {
-    return null; // Render nothing while redirecting
+    return null;
   }
 
   return (

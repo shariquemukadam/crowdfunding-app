@@ -1,55 +1,77 @@
 .pageContainer {
-    background-color: var(--background);
-    min-height: 100vh;
-    padding: 2rem;
-  }
-  
-  .content {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin-top: 1rem;
-  }
-  
-  .form label {
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    color: var(--heading);
-  }
-  
-  .form input {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: sans-serif;
-  }
-  
-  .form button {
-    padding: 0.75rem;
-    background-color: var(--primary);
-    color: var(--white);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: sans-serif;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-  }
-  
-  .form button:hover {
-    background-color: var(--primary-hover);
-    transform: scale(1.05);
-  }
+  background-color: var(--background);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin-top: 1rem;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: var(--heading);
+}
+
+.form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+.form button {
+  padding: 0.75rem;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.form button:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+/* New styles for FundraiserListWithForm */
+.container {
+  margin-top: 2rem; /* Style for the main container */
+}
+
+.fundraiserCard {
+  background-color: var(--background-light, #f0f8ff); /* Light blue background */
+  padding: 1rem; /* Inner spacing */
+  margin-bottom: 1rem; /* Spacing between cards */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.fundraiserCard h2 {
+  margin-bottom: .5rem; /* Space below heading */
+  color: var(--primary-dark, #000080); /* Dark blue heading color */
+}
+
+.fundraiserCard p {
+ margin-bottom:.5 rem
+}

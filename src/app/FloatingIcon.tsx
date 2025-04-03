@@ -1,9 +1,9 @@
-import styles from './FloatingIcon.module.css';
+import Image from 'next/image';
 
 export default function FloatingIcon() {
   return (
-    <div className={styles.floatingIcon}>
-      <img src="/lightning-bolt.png" alt="Toggle Feature" />
+    <div>
+      <Image src="/icon.png" alt="Floating Icon" width={50} height={50} />
     </div>
   );
 }

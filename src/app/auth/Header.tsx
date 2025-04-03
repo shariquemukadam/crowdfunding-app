@@ -3,18 +3,18 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
+import { User } from "@supabase/supabase-js"; // Import User type
+
 export default function Header() {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null); // Replace "any"
 
   useEffect(() => {
-    // Get the current user
     const fetchUser = async () => {
       const { data: { user } } = await supabase.auth.getUser();
       setUser(user);
     };
     fetchUser();
 
-    // Listen for auth state changes
     const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
       setUser(session?.user ?? null);
     });
@@ -26,7 +26,7 @@ export default function Header() {
 
   const handleSignOut = async () => {
     await supabase.auth.signOut();
-    window.location.href = '/'; // Redirect to home page
+    window.location.href = '/';
   };
 
   return (

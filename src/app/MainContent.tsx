@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image'; // Import Image component
 import styles from './MainContent.module.css';
 
 export default function MainContent() {
@@ -21,7 +22,13 @@ export default function MainContent() {
         </div>
       </div>
       <div className={styles.imageSection}>
-        <img src="/hero-image.jpg" alt="Teamwork and support" />
+        {/* Replace <img> with <Image> */}
+        <Image 
+          src="/hero-image.jpg" 
+          alt="Teamwork and support" 
+          width={800} 
+          height={600} 
+        />
       </div>
     </main>
   );

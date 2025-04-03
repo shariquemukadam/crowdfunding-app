@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { supabase } from '../lib/supabaseClient';
+
 type Fundraiser = {
   id: number;
   student_id: string;
@@ -51,7 +52,7 @@ export function LendProvider({ children }: { children: ReactNode }) {
     // Subscribe to real-time changes
     const subscription = supabase
       .channel('public:fundraisers')
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'fundraisers' }, (payload) => {
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'fundraisers' }, () => {
         fetchFundraisers(); // Refetch on any change
       })
       .subscribe();
